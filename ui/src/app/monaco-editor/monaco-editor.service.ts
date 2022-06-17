@@ -60,9 +60,10 @@ export class MonacoEditorService {
     // install Monaco language client services
     MonacoServices.install(monaco);
 
-    this.apiService.openLSPWebsocket('python', this.languageOnOpenHandler('Python', ['python']));
-    this.apiService.openLSPWebsocket('cpp', this.languageOnOpenHandler('C++', ['cpp']));
-    this.apiService.openLSPWebsocket('go', this.languageOnOpenHandler('Golang', ['go']));
+    // this.apiService.openLSPWebsocket('python', this.languageOnOpenHandler('Python', ['python']));
+    // this.apiService.openLSPWebsocket('cpp', this.languageOnOpenHandler('C++', ['cpp']));
+    // this.apiService.openLSPWebsocket('go', this.languageOnOpenHandler('Golang', ['go']));
+    this.apiService.openLSPWebsocket('java', this.languageOnOpenHandler('Java', ['java']));
   }
 
   languageOnOpenHandler(name: string, documentSelector: string[]): ((ws: WebSocket) => any) {
